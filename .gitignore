@@ -1,0 +1,128 @@
+# =========================================
+# Python Artifacts
+# =========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =========================================
+# Virtual Environments
+# =========================================
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# =========================================
+# IDEs and Editors
+# =========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# =========================================
+# Environment and Secrets
+# =========================================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+secrets.yaml
+secrets.json
+
+# =========================================
+# Databases and Vector Stores
+# =========================================
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.db-journal
+chroma_db_persist/
+chroma_db_persist_*/
+external/chromaDB/
+db/chroma_*/
+CLAUDE.md
+
+# =========================================
+# Model Weights and Large Artifacts
+# =========================================
+# DO NOT upload large model checkpoint files to GitHub.
+# If you have local model weights, place them in a dedicated
+# ignored directory or ensure they match these patterns.
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.h5
+*.onnx
+*.pb
+models/*/
+checkpoints/
+pretrained/
+weights/
+
+# =========================================
+# Logs and Temporary Files
+# =========================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# =========================================
+# OS Generated Files
+# =========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# =========================================
+# Test and Coverage Reports
+# =========================================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/

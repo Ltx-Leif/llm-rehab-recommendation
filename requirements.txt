@@ -1,0 +1,29 @@
+# llm_rehab_recommendation/requirements.txt
+
+# --- Core FastAPI & Utils ---
+fastapi>=0.100.0
+uvicorn[standard]
+pydantic>=2.7.0,<3.0.0
+pydantic-settings>=2.0
+
+# --- HTTP Client ---
+httpx>=0.27.0
+requests
+
+# --- Text LLM Client (If still used, e.g., for text_nlp) ---
+# openai>=1.0.0 # Keep if text_nlp uses it, otherwise optional
+
+# --- Knowledge Base ---
+chromadb>=1.0.0 # Verify version compatibility if issues arise
+sentence-transformers>=2.3.0
+# Consider numpy<2.0 if compatibility issues arise with older sentence-transformers/chroma
+numpy
+
+# --- VLM (Gemini API) ---
+google-generativeai>=0.5.0 # Use the official Google SDK (ensure version >= 0.4 for safety settings)
+Pillow>=9.0.0 # Needed to load/process images
+agno # <-- ADDED: For interacting with models like Gemini
+duckduckgo-search # <-- ADDED: Tool used by the medical imaging agent
+
+# --- Environment Loading ---
+python-dotenv
