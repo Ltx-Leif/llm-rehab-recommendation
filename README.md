@@ -4,11 +4,15 @@
 
 ---
 
-## 项目简介
+## 目录
 
-本项目是一个基于 **FastAPI** 的医学 AI 系统，旨在接收患者的多模态数据（结构化/非结构化文本、医学影像、交互式补充信息），自动完成 **疾病诊断 → 药物与治疗方案生成 → 排班整合**，最终输出完整的康复推荐方案。
-
-目前 **Phase 1（多模态预处理）** 和 **Phase 2（智能疾病诊断）** 已经实现并可用，Phase 3–5 为预留扩展模块。
+- [核心功能](#核心功能)
+- [系统架构](#系统架构)
+- [项目结构](#项目结构)
+- [快速开始](#快速开始)
+- [核心 API](#核心-api)
+- [开发说明](#开发说明)
+- [许可证](#许可证)
 
 ---
 
@@ -25,9 +29,13 @@
 
 ## 系统架构
 
-![系统流程图](flow%20chart.png)
+<div align="center">
+  <img src="flow chart.png" width="55%">
+</div>
 
-### 目录结构说明
+-----
+
+### 项目结构
 
 | 目录                  | 说明                                                              |
 | --------------------- | ----------------------------------------------------------------- |
@@ -109,7 +117,7 @@ python tests/run_e2e_test.py
 
 ---
 
-## API 接口说明
+## 核心 API
 
 ### POST `/api/v1/preprocess` — 多模态预处理
 
@@ -181,16 +189,26 @@ python tests/run_e2e_test.py
 
 ## 许可证
 
-本项目采用 [MIT License](LICENSE) 开源。
+本项目基于 [MIT License](LICENSE) 开源，你可以自由使用、修改和分发本项目的代码，但请在衍生作品中保留原始许可证声明。本项目仅供学术研究、教学与个人学习使用，**不作为医疗器械或临床诊断依据**。
+
+```
+MIT License
+
+Copyright (c) 2026 Tianxiang Li
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
 
 ---
 
-## 免责声明
-
-⚠️ **本项目仅供学术研究、教学演示和编程学习使用，不构成任何医疗建议、诊断或治疗方案。** 任何基于本项目输出的医学决策均需谨慎对待，并应在持有执业资格的医务人员指导下进行。作者不对因使用本项目而产生的任何后果承担责任。
-
----
-
-## English Abstract
-
-**LLM Rehab Recommendation System** is a multimodal medical AI pipeline built on **FastAPI**. It ingests patient text records and medical images, leverages a local **HuatuoGPT-Vision** model for image analysis, a **DeepSeek** LLM for text understanding, and a **ChromaDB** vector knowledge base for retrieval-augmented diagnosis. Currently, **Phase 1 (Preprocessing)** and **Phase 2 (Diagnosis with interactive clarification)** are fully implemented, while Phases 3–5 (Recommendation, Scheduling, and Reporting) are reserved for future extension.
+> 如果你在学习过程中有任何问题，欢迎提交 [Issue](https://github.com/[YourUsername]/MusicPlayer4/issues) 或 [Pull Request](https://github.com/[YourUsername]/MusicPlayer4/pulls)。祝你学习愉快！
+>
+> ⭐ 如果这个项目对你有帮助，欢迎 Star 支持！
